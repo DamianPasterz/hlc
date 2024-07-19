@@ -1,37 +1,37 @@
 <div class="dialog-content">
   <form [formGroup]="employeeForm" class="dialog-form">
     <mat-form-field appearance="fill">
-      <mat-label>ID</mat-label>
+      <mat-label>{{ label.id }}</mat-label>
       <input matInput formControlName="id" readonly />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>name</mat-label>
+      <mat-label>{{ label.firstName }}</mat-label>
       <input matInput formControlName="firstName" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>lastName</mat-label>
+      <mat-label>{{ label.lastName }}</mat-label>
       <input matInput formControlName="lastName" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>age</mat-label>
+      <mat-label>{{ label.age }}</mat-label>
       <input matInput formControlName="age" type="number" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>city</mat-label>
+      <mat-label>{{ label.city }}</mat-label>
       <input matInput formControlName="city" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>street</mat-label>
+      <mat-label>{{ label.street }}</mat-label>
       <input matInput formControlName="street" />
     </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>department</mat-label>
+      <mat-label>{{ label.department }}</mat-label>
       <input matInput formControlName="department" />
     </mat-form-field>
 

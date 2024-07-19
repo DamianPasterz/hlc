@@ -5,7 +5,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { EmployeeFacade } from '@app/state/employee';
 import { Employee } from '@models/employee.models';
-import { EditEmployeeComponent } from '../edit-employee/edit-employee.component';
+import { EditEmployeeComponent, Label } from '../edit-employee/edit-employee.component';
 
 @Component({
   selector: 'app-employee',
@@ -21,7 +21,7 @@ export class EmployeeComponent implements OnInit {
   displayedColumns: string[] = ['id', 'firstName', 'lastName', 'age', 'city', 'street', 'department', 'actions'];
   employeeFacade = inject(EmployeeFacade);
   dialog = inject(MatDialog);
-
+  label = Label;
   ngOnInit(): void {
     this.employeeFacade.loadEmployees();
     this.employees$.subscribe((d) => console.log(d));

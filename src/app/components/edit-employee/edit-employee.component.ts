@@ -8,6 +8,17 @@ import { MatInputModule } from '@angular/material/input';
 import { Employee } from '@app/models/employee.models';
 import { ConfirmButtonComponent } from '../confirm-button/confirm-button.component';
 
+export enum Label {
+  id = 'ID',
+  firstName = 'FirstName',
+  lastName = 'LastName',
+  age = 'Age',
+  city = 'City',
+  street = 'Street',
+  department = 'Department',
+  action = 'Action',
+}
+
 @Component({
   selector: 'app-edit-employee',
   standalone: true,
@@ -25,7 +36,7 @@ import { ConfirmButtonComponent } from '../confirm-button/confirm-button.compone
 })
 export class EditEmployeeComponent implements OnInit {
   employeeForm: FormGroup;
-
+  label = Label;
   constructor(
     private fb: FormBuilder,
     private dialogRef: MatDialogRef<EditEmployeeComponent>,
