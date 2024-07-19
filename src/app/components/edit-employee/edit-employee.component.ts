@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
@@ -21,6 +21,7 @@ import { ConfirmButtonComponent } from '../confirm-button/confirm-button.compone
   ],
   templateUrl: './edit-employee.component.html',
   styleUrls: ['./edit-employee.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EditEmployeeComponent implements OnInit {
   employeeForm: FormGroup;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-confirm-button',
@@ -7,6 +7,7 @@ import { Component, input, output } from '@angular/core';
   imports: [CommonModule],
   templateUrl: './confirm-button.component.html',
   styleUrl: './confirm-button.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConfirmButtonComponent {
   buttonText = input.required<string>();

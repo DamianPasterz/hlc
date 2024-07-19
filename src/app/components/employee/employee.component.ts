@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
@@ -13,6 +13,7 @@ import { EditEmployeeComponent } from '../edit-employee/edit-employee.component'
   imports: [CommonModule, MatTableModule, MatButtonModule, MatDialogModule],
   templateUrl: './employee.component.html',
   styleUrls: ['./employee.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeComponent implements OnInit {
   employees$ = inject(EmployeeFacade).employees$;
