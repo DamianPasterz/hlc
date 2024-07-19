@@ -11,7 +11,6 @@ import { Component, input, output } from '@angular/core';
 export class ConfirmButtonComponent {
   buttonText = input.required<string>();
   confirmText = input<string>('Definitely?');
-
   buttonClass = input<string>('confirm');
   buttonMainClass = input<string>('settings-button');
   buttonClick = output<void>();
