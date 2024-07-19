@@ -1,0 +1,17 @@
+.container {
+  padding-top: 5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100dvh;
+  width: 100dvw;
+  position: relative;
+}
+
+mat-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}

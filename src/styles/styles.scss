@@ -1,0 +1,29 @@
+@use 'abstracts/_abstracts-dir';
+@use 'base/_base-dir';
+
+
+.mat-step-text-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  background-color: red;
+}
+
+.mat-step-label.mat-step-label-active {
+  // color: blue !important;
+  background-color: blue !important;
+}
+
+.mat-stepper-horizontal-line {
+  border-top-style: none !important;
+}
+
+.mat-step-icon {
+  all: unset !important;
+  width: 0 !important;
+  height: 0 !important;
+  color: transparent !important;
+}
+
+.ng-star-inserted {
+  all: unset;
+}

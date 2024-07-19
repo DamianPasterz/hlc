@@ -1,0 +1,53 @@
+<div class="dialog-content">
+  <form [formGroup]="employeeForm" class="dialog-form">
+    <mat-form-field appearance="fill">
+      <mat-label>ID</mat-label>
+      <input matInput formControlName="id" readonly />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>name</mat-label>
+      <input matInput formControlName="firstName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>lastName</mat-label>
+      <input matInput formControlName="lastName" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>age</mat-label>
+      <input matInput formControlName="age" type="number" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>city</mat-label>
+      <input matInput formControlName="city" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>street</mat-label>
+      <input matInput formControlName="street" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>department</mat-label>
+      <input matInput formControlName="department" />
+    </mat-form-field>
+
+    <div class="dialog-buttons">
+      <app-confirm-button
+        [buttonText]="'save'"
+        [buttonClass]="'delete-confirm'"
+        (buttonClick)="onSave()"
+        type="submit"
+      ></app-confirm-button>
+      <app-confirm-button
+        [buttonText]="'cancel'"
+        [buttonClass]="'delete-confirm'"
+        (buttonClick)="onCancel()"
+        type="submit"
+      ></app-confirm-button>
+    </div>
+  </form>
+</div>

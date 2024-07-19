@@ -1,0 +1,19 @@
+.dialog-content {
+  width: 400px;
+  padding: 20px;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-form label {
+  margin-bottom: 10px;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}

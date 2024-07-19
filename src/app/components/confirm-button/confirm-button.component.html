@@ -1,0 +1,12 @@
+<button
+  class="settings-button"
+  [ngClass]="{
+    confirm: confirm,
+    'settings-button': buttonMainClass() === 'settings-button',
+    'FM-Button': buttonMainClass() === 'FM-Button',
+    'FM-Button-small': buttonMainClass() === 'FM-Button-small',
+  }"
+  (click)="onClick()"
+>
+  {{ !confirm ? buttonText() : confirmText() }}
+</button>
